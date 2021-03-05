@@ -43,7 +43,7 @@ from discord import *
 
 
 
-# Now I will create a variable to store my bot token as well as instatiate or "construct" a client object 
+# Now I will create a variable to store my bot token as well as instantiate or "construct" a client object 
 token = 'bot token goes here'  
 client = discord.Client()   
 
@@ -51,7 +51,7 @@ client = discord.Client()
 # Now we can add some functions to our bot. 
 
 
-# Discord has many built-in functions which are automatically called when certain things happen. These things are called events
+# Discord has many built-in functions which are automatically called when certain things happen. These things are called events.
 # Much like in other modules, such as pygame. Events will trigger these functions. 
 
 
