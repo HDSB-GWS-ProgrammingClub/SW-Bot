@@ -1,4 +1,6 @@
 '''
+Program: Star Wars Bot
+Version: 1.0
 Author: Adam Wahba
 Date: 2021-03-04
 
