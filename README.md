@@ -5,9 +5,12 @@
 
 ##### For use by: Garth Webb Programming Club
 
+---
+
+#### Purpose:
 This is a simple discord bot intended for use in servers to add inconvenient star wars memes and quotes.
 This program will be updated over time. See version guide in the Source Code folder.
-#### Purpose:
+
 This program is also to be used as a learning example for anyone who wants to learn how to make their own discord bots.
 This project will contain documentation regarding how to create a discord bot using discord's Python API. More detail below.
 
@@ -25,6 +28,7 @@ We will need to install discord's python module that will let us use their API.
 To do this, open a terminal, command prompt, or any other shell and use the following command
 ###### pip install discord
 
+---
 
 #### Discord Bots, clients and the discord API
 
