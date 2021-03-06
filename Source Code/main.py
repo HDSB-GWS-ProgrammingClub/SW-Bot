@@ -9,7 +9,10 @@ This is the second version of the Star Wars Bot program.
 The bot token has been removed in the public version of this program.
 
 Functionality(VERSION 2):
-This version of the bot has image sending/reply capability
+This version of the bot has image sending/reply capability.
+Informative links; 
+https://discordpy.readthedocs.io/en/latest/api.html#discord.File
+https://discordpy.readthedocs.io/en/latest/faq.html#how-do-i-upload-an-image
 
 OOP:
 It is helpful to know what Object Oriented programming is before diving into the code of a discord bot.
@@ -43,7 +46,6 @@ import discord
 from discord import *
 
 
-
 # Bot Token and Client object
 token = 'bot token goes here'  
 client = discord.Client()   
@@ -64,26 +66,35 @@ async def on_message(message):
     '''
     Called when a Message is created and sent.
     '''
+    # We will be working with the same examples as the previous version of the bot
+    # See link in the program header for information about working with files in discord.py
+    # To send an image to discord, we will be working with the discord "File" object, which takes 2 parameters. 
+    # These 2 parameters are the file path(where it is) and the file name(what its called)
+    # I will store the filename/filepath in a list to keep the code clean
+    # All the images used will be stored in a subfolder to keep the program root directory clean as well.
+    # Note that any discord supported file type can be sent/used with the discord File object (mp4 files work but will not be present in this example)
+
+
+    image = ['Source Code\Images\general_kenobi.jpg', 'Source Code\Images\so_love_has_blinded_you.gif', 'Source Code\Images\i_have_the_high_ground.png', 'Source Code\Images\do_or_do_not.gif']
 
     if 'hello there' in message.content.lower():
         await message.channel.send('General Kenobi')
-   
+        # Now, instead of passing just a string to the message object. We will pass the file that we want to send
+        # We will instantiate(construct) the file object with || file=discord.File(image[x]) || 
+        # Note: The 'file' variable does not need to be named file. I named it file to clearly show how/where we create the file 
+        await message.channel.send(file=discord.File(image[0]))
+
     if 'blind' in message.content.lower() and message.author.id != client.user.id:
         await message.channel.send('So love has blinded you?')
+        await message.channel.send(file=discord.File(image[1]))
 
     if 'high' and 'ground' in message.content.lower() and message.author.id != client.user.id:
         await message.channel.send('I have the high ground Anakin')
-    
+        await message.channel.send(file=discord.File(image[2]))
+
     if 'try' in message.content.lower() and message.author.id != client.user.id:
         await message.channel.send('Do or do not, there is no try.')
-
-
-
-
-
-
-
-
+        await message.channel.send(file=discord.File(image[3]))
 
 
 # Client run method
