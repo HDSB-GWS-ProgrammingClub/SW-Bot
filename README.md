@@ -22,7 +22,7 @@ I chose Python for this example program because Python is more beginner friendly
 
 -Discord Module
 -Python version 3.5 or later 
-*Installing the discord module using pip*
+*Installing the discord module using pip*,
 pip is the Python package manager, used to install 3rd party modules/packages for Python.
 We will need to install discord's python module that will let us use their API.
 To do this, open a terminal, command prompt, or any other shell and use the following command
